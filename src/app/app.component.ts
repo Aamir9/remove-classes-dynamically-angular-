@@ -20,7 +20,7 @@ export class AppComponent {
      setTimeout((i) => {
         if (this.span.classList.contains("a")) {
           console.log("yes");
-          this.span[i].classList.remove("a");
+          this.span[2].classList.remove("a");
           i++;
         }
         if (this.span == null) {
@@ -35,7 +35,7 @@ export class AppComponent {
     let i = 0;
     for (i = 0; i <3; i++) {
        console.log("ff");
-        this.span = document.getElementsByTagName("span")[i];
+        this.span = document.getElementsByTagName("span")[2];
        this.setTimeFunc(i);
      
 
