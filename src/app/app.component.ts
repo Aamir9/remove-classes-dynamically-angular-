@@ -21,7 +21,7 @@ export class AppComponent {
       let spanlength = document.getElementsByTagName("span").length;
       let i = 0;
       for (i = 0; i < spanlength; i++) {
-        if (this.span[i].className === "a") {
+        if (this.span[i].className === "b a") {
           this.span[i].classList.remove("a");
         }
       }
