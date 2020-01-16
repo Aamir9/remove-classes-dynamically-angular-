@@ -14,31 +14,19 @@ export class AppComponent {
   constructor() {
     this.test();
   }
+ test() {
 
-  setTimeFunc(i){
-
-     setTimeout((i) => {
-        if (this.span.classList.contains("a")) {
-          console.log("yes");
-          this.span[2].classList.remove("a");
-          i++;
+    setTimeout(() => {
+      this.span = document.getElementsByTagName("span");
+      let spanlength = document.getElementsByTagName("span").length;
+      let i = 0;
+      for (i = 0; i < spanlength; i++) {
+        if (this.span[i].className === "a") {
+          this.span[i].classList.remove("a");
         }
-        if (this.span == null) {
-          console.log("not exit");
-          this.j=this.stop;
-        
-        }
-      }, 1000);
+      }
+    })
   }
-  test() {
-  
-    let i = 0;
-    for (i = 0; i <3; i++) {
-       console.log("ff");
-        this.span = document.getElementsByTagName("span")[2];
-       this.setTimeFunc(i);
-     
 
-    }
-  }
+
 }
